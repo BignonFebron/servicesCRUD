@@ -1,9 +1,7 @@
 package com.bootcamp.crud;
 
 import static com.bootcamp.AppConstants.PERSISTENCE_UNIT;
-import com.bootcamp.jpa.entities.Impact;
 import com.bootcamp.jpa.entities.Projet;
-import com.bootcamp.jpa.repositories.ImpactRepository;
 import com.bootcamp.jpa.repositories.ProjetRepository;
 import java.sql.SQLException;
 import java.util.List;
@@ -15,7 +13,6 @@ import java.util.List;
 public class ProjetCRUD {
 
     /* Crud for projet */
-
     public static void create(Projet projet) throws SQLException {
         ProjetRepository pr = new ProjetRepository(PERSISTENCE_UNIT);
         pr.create(projet);
@@ -72,5 +69,4 @@ public class ProjetCRUD {
         return projets;
     }
 
-    
 }
